@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="ancor3" prefHeight="400.0" prefWidth="400.0" stylesheets="@../css/select.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="socialnetwork.controller.CreateNewAccount">
+   <children>
+      <TextField fx:id="id" layoutX="227.0" layoutY="101.0" promptText="ENTER ID" />
+      <TextField fx:id="email" layoutX="226.0" layoutY="146.0" promptText="ENTER EMAIL ADRESS" />
+      <Label fx:id="label1" layoutX="226.0" layoutY="127.0" prefHeight="18.0" prefWidth="149.0" textFill="WHEAT" />
+      <Label fx:id="label2" layoutX="226.0" layoutY="172.0" prefHeight="18.0" prefWidth="149.0" textFill="WHEAT" />
+      <Label fx:id="label3" layoutX="225.0" layoutY="225.0" prefHeight="18.0" prefWidth="149.0" textFill="WHEAT" />
+      <Label fx:id="label4" layoutX="225.0" layoutY="284.0" prefHeight="18.0" prefWidth="149.0" textFill="WHEAT" />
+      <Button fx:id="sign_in" layoutX="225.0" layoutY="334.0" mnemonicParsing="false" onAction="#create_account" prefHeight="26.0" prefWidth="149.0" text="SIGN IN" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <PasswordField fx:id="password1" layoutX="225.0" layoutY="200.0" promptText="enter the password" />
+      <PasswordField fx:id="password2" layoutX="225.0" layoutY="251.0" promptText="re-enter the password" />
+      <TextField fx:id="first_name" layoutX="227.0" layoutY="14.0" promptText="ENTER FIRST NAME" />
+      <TextField fx:id="second_name" layoutX="227.0" layoutY="58.0" promptText="ENTER SECOND NAME" />
+      <Label fx:id="label5" layoutX="231.0" layoutY="40.0" prefHeight="18.0" prefWidth="141.0" textFill="WHEAT" />
+      <Label fx:id="label6" layoutX="227.0" layoutY="84.0" prefHeight="18.0" prefWidth="142.0" textFill="WHEAT" />
+      <ImageView fitHeight="165.0" fitWidth="204.0" layoutX="14.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../photos/join.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

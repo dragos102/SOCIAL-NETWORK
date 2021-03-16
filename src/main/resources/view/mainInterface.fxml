@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="ancor1" prefHeight="170.0" prefWidth="600.0" stylesheets="@../css/select.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="socialnetwork.controller.MainInterface">
+   <children>
+      <TextField fx:id="username" layoutX="205.0" layoutY="86.0" promptText="USERNAME">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></TextField>
+     
+      <Button fx:id="create_new_account" layoutX="205.0" layoutY="115.0" mnemonicParsing="false" onAction="#create_new_account" prefHeight="35.0" prefWidth="390.0" text="CREARE CONT NOU" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="25.0" />
+         </font></Button>
+      <Label alignment="CENTER" layoutX="201.0" layoutY="3.0" prefHeight="67.0" prefWidth="399.0" text="LOG IN" textFill="WHEAT" textOverrun="WORD_ELLIPSIS">
+         <font>
+            <Font name="System Bold Italic" size="48.0" />
+         </font></Label>
+      <PasswordField fx:id="password" layoutX="362.0" layoutY="86.0" promptText="PASSWORD">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></PasswordField>
+      <Button fx:id="log_in" layoutX="523.0" layoutY="85.0" mnemonicParsing="false" onAction="#connecting" prefHeight="26.0" prefWidth="71.0" text="LOG IN" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <ImageView fitHeight="192.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../photos/Capture.JPG" />
+         </image>
+      </ImageView>
+      </children>
+</AnchorPane>

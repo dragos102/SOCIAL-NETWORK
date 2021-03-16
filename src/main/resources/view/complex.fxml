@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="ancor4" prefHeight="516.0" prefWidth="782.0" stylesheets="@../css/select.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="socialnetwork.controller.ComplexController">
+   <children>
+      <TabPane fx:id="tabmare" layoutX="-2.0" layoutY="1.0" prefHeight="498.0" prefWidth="782.0" tabClosingPolicy="UNAVAILABLE" tabMaxHeight="60.0" tabMaxWidth="90.0" tabMinHeight="60.0" tabMinWidth="90.0">
+        <tabs>
+          <Tab fx:id="unu">
+            <content>
+              <AnchorPane fx:id="anchor1" minHeight="0.0" minWidth="0.0" prefHeight="267.0" prefWidth="562.0">
+                     <children>
+                        <TableView fx:id="tabel_prietenii" layoutX="-1.0" layoutY="173.0" prefHeight="190.0" prefWidth="746.0" style="-fx-background-color: grey;">
+                          <columns>
+                            <TableColumn fx:id="first_name" prefWidth="352.39996910095215" style="-fx-background-color: SlateGrey; -fx-border-style:solid; -fx-border-color: SlateGrey;-fx-border-width: 2; -fx-font-weight: bold; -fx-text-fill: wheat;" text="NUME" />
+                              <TableColumn fx:id="last_name" prefWidth="383.9999938964844" style="-fx-background-color:SlateGrey;  -fx-border-style:solid; -fx-border-color: SlateGrey;-fx-border-width: 2; -fx-font-weight: bold; -fx-text-fill: wheat;" text="PRENUME" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="add_friend" layoutY="364.0" mnemonicParsing="false" onAction="#add_friend" prefHeight="42.0" prefWidth="258.0" text="ADAUGA PRIETEN" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="delete_friend" layoutX="453.0" layoutY="363.0" mnemonicParsing="false" onAction="#delete_friend" prefHeight="36.0" prefWidth="292.0" text="STERGE PRIETEN" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="19.0" />
+                           </font>
+                        </Button>
+                        <Pagination fx:id="pagina_prieteni" layoutX="258.0" layoutY="363.0" prefHeight="46.0" prefWidth="195.0" />
+                        <ImageView fitHeight="109.0" fitWidth="116.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/person.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="label_welcome" layoutX="115.0" layoutY="2.0" prefHeight="90.0" prefWidth="628.0" textFill="#e2dcdc">
+                           <font>
+                              <Font name="System Bold Italic" size="23.0" />
+                           </font></Label>
+                        <ScrollPane layoutX="1.0" layoutY="97.0">
+                           <content>
+                              <VBox fx:id="vbox_notificari1" prefHeight="74.0" prefWidth="721.0" style="-fx-background-color: #585C59;" />
+                           </content>
+                        </ScrollPane>
+                        <Label layoutX="1.0" layoutY="-1.0" prefHeight="25.0" prefWidth="106.0" text=" PRIETENI" textFill="RED">
+                           <font>
+                              <Font name="System Bold" size="11.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="107.0" layoutY="5.0" prefHeight="18.0" prefWidth="95.0" text="CERERI TRIMISE" textFill="WHEAT">
+                           <font>
+                              <Font name="System Bold" size="11.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="212.0" layoutY="5.0" prefHeight="18.0" prefWidth="91.0" text="CERERI PRIMITE" textFill="#f5dfb5">
+                           <font>
+                              <Font name="System Bold" size="11.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="319.0" layoutY="4.0" prefHeight="18.0" prefWidth="94.0" text="     CHAT" textFill="WHEAT">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="421.0" layoutY="3.0" prefHeight="18.0" prefWidth="87.0" text="      PDF" textFill="WHEAT">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="522.0" layoutY="6.0" prefHeight="18.0" prefWidth="96.0" text="  EVENIMENTE" textFill="WHEAT">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="624.0" layoutY="6.0" prefHeight="18.0" prefWidth="92.0" text="   ABONARI" textFill="WHEAT">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="doi">
+            <content>
+              <AnchorPane fx:id="anchor2" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tabel_cereri" layoutY="109.0" prefHeight="228.0" prefWidth="742.0" style="-fx-background-color: grey; ">
+                          <columns>
+                            <TableColumn fx:id="id_cerere" prefWidth="144.80001258850098" style="-fx-background-color:SlateGrey;  -fx-border-style: solid; -fx-border-color: SlateGrey;-fx-border-width: 2; -fx-font-weight: bold; -fx-text-fill: wheat;" text="id" />
+                            <TableColumn fx:id="from" prefWidth="141.5999755859375" style="-fx-background-color: SlateGrey;  -fx-border-style: solid; -fx-border-color: SlateGrey;-fx-border-width: 2; -fx-font-weight: bold; -fx-text-fill:wheat;" text="DE LA" />
+                              <TableColumn fx:id="to" prefWidth="112.5999755859375" style="-fx-background-color: SlateGrey;  -fx-border-style: solid; -fx-border-color: SlateGrey;-fx-border-width: 2; -fx-font-weight: bold; -fx-text-fill: wheat;" text="CATRE" />
+                              <TableColumn fx:id="status" prefWidth="126.80007934570312" style="-fx-background-color: SlateGrey;  -fx-border-style: solid; -fx-border-color: SlateGrey;-fx-border-width: 2; -fx-font-weight: bold; -fx-text-fill: wheat;" text="STATUS" />
+                              <TableColumn fx:id="date" prefWidth="217.59995117187498" style="-fx-background-color: SlateGrey;  -fx-border-style: solid; -fx-border-color: SlateGrey;-fx-border-width: 2; -fx-font-weight: bold; -fx-text-fill: wheat;" text="DATA" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="delete_cerere" layoutX="518.0" layoutY="347.0" mnemonicParsing="false" onAction="#delete_cerere" prefHeight="45.0" prefWidth="190.0" text="STERGE" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="21.0" />
+                           </font></Button>
+                        <Pagination fx:id="pagina_cereri" layoutX="298.0" layoutY="358.0" prefHeight="34.0" prefWidth="118.0" />
+                        <Label layoutX="172.0" layoutY="2.0" prefHeight="102.0" prefWidth="394.0" text="CERERI TRIMISE " textFill="WHEAT">
+                           <font>
+                              <Font name="System Bold" size="35.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="113.0" fitWidth="95.0" layoutX="7.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/finala.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="4.0" layoutY="-2.0" prefHeight="20.0" prefWidth="123.0" text="     PRIETENI" textFill="WHEAT">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="112.0" layoutY="-1.0" prefHeight="18.0" prefWidth="91.0" text="CERERI TRIMISE" textFill="RED">
+                           <font>
+                              <Font name="System Bold" size="11.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="213.0" prefHeight="18.0" prefWidth="96.0" text="CERERI PRIMITE" textFill="WHEAT">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="315.0" layoutY="1.0" prefHeight="18.0" prefWidth="98.0" text="         CHAT" textFill="WHEAT">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="420.0" layoutY="-3.0" prefHeight="24.0" prefWidth="94.0" text="         PDF" textFill="WHEAT">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="517.0" prefHeight="18.0" prefWidth="98.0" text="EVENIMENTE" textFill="WHEAT">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="624.0" layoutY="1.0" prefHeight="18.0" prefWidth="94.0" text="     ABONARI" textFill="WHEAT">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="trei">
+                <content>
+                    <AnchorPane fx:id="anchor3" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                        <children>
+                            <TableView fx:id="tabel_cereri_2" layoutX="-3.0" layoutY="96.0" prefHeight="234.0" prefWidth="738.0" style="-fx-background-color: grey; ">
+                                <columns>
+                                    <TableColumn fx:id="id_cerere_2" prefWidth="130.0000228881836" style="-fx-background-color:SlateGrey;  -fx-border-style: solid; -fx-border-color: SlateGrey;-fx-border-width: 2; -fx-font-weight: bold; -fx-text-fill: wheat;" text="id" />
+                                    <TableColumn fx:id="from_2" prefWidth="132.39999389648438" style="-fx-background-color: SlateGrey;  -fx-border-style: solid; -fx-border-color: SlateGrey;-fx-border-width: 2; -fx-font-weight: bold; -fx-text-fill:wheat;" text="DE LA" />
+                                    <TableColumn fx:id="to_2" prefWidth="113.99996948242188" style="-fx-background-color: SlateGrey;  -fx-border-style: solid; -fx-border-color: SlateGrey;-fx-border-width: 2; -fx-font-weight: bold; -fx-text-fill: wheat;" text="CATRE" />
+                                    <TableColumn fx:id="status_2" prefWidth="151.60000610351562" style="-fx-background-color: SlateGrey;  -fx-border-style: solid; -fx-border-color: SlateGrey;-fx-border-width: 2; -fx-font-weight: bold; -fx-text-fill: wheat;" text="STATUS" />
+                                    <TableColumn fx:id="date_2" prefWidth="202.0" style="-fx-background-color: SlateGrey;  -fx-border-style: solid; -fx-border-color: SlateGrey;-fx-border-width: 2; -fx-font-weight: bold; -fx-text-fill: wheat;" text="DATA" />
+                                </columns>
+                            </TableView>
+                        <Button fx:id="raspunde" layoutX="545.0" layoutY="342.0" mnemonicParsing="false" onAction="#raspunde_buton" prefHeight="39.0" prefWidth="185.0" text="RASPUNDE" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="17.0" />
+                           </font></Button>
+                        <Pagination fx:id="pagina_cereri_2" layoutX="250.0" layoutY="355.0" prefHeight="35.0" prefWidth="192.0" />
+                        <Label layoutX="138.0" layoutY="3.0" prefHeight="90.0" prefWidth="570.0" text="CERERI PRIMITE" textFill="WHEAT">
+                           <font>
+                              <Font name="System Bold" size="35.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="80.0" fitWidth="100.0" layoutX="14.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/finala.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="2.0" layoutY="-3.0" prefHeight="19.0" prefWidth="102.0" text="   PRIETENI" textFill="WHEAT">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="106.0" layoutY="-2.0" prefHeight="18.0" prefWidth="99.0" text="CEFRERI TRIMISE" textFill="WHEAT">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="211.0" layoutY="-1.0" prefHeight="18.0" prefWidth="98.0" text="  CERERI PRIMITE" textFill="RED">
+                           <font>
+                              <Font name="System Bold" size="11.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="309.0" layoutY="-2.0" prefHeight="18.0" prefWidth="95.0" text="        CHAT" textFill="WHEAT">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="415.0" layoutY="-2.0" prefHeight="18.0" prefWidth="98.0" text="          PDF" textFill="WHEAT">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="514.0" layoutY="-4.0" prefHeight="23.0" prefWidth="102.0" text="  EVENIMENTE" textFill="WHEAT">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="638.0" prefHeight="18.0" prefWidth="95.0" text="ABONARI" textFill="WHEAT">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        </children>
+                    </AnchorPane>
+                </content>
+            </Tab>
+            <Tab fx:id="patru">
+                <content>
+                    <AnchorPane fx:id="anchor4" minHeight="0.0" minWidth="0.0" prefHeight="378.0" prefWidth="609.0">
+                        <children>
+                            <TableView fx:id="prieteni_mess" layoutX="2.0" layoutY="-1.0" prefHeight="153.0" prefWidth="266.0" style="-fx-background-color: grey; ">
+                                <columns>
+                                    <TableColumn fx:id="Nume_mess" prefWidth="147.39999079704285" style="-fx-background-color:SlateGrey;  -fx-border-style: solid; -fx-border-color: SlateGrey;-fx-border-width: 2; -fx-font-weight: bold; -fx-text-fill: wheat;" text="Nume" />
+                                    <TableColumn fx:id="Prenume_mess" prefWidth="114.20002746582031" style="-fx-background-color: SlateGrey;  -fx-border-style: solid; -fx-border-color: SlateGrey;-fx-border-width: 2; -fx-font-weight: bold; -fx-text-fill:wheat;" text="Prenume" />
+                             </columns>
+                            </TableView>
+                        <ScrollPane layoutX="269.0" layoutY="32.0">
+                           <content>
+
+                              <VBox fx:id="vbox" prefHeight="348.0" prefWidth="474.0" />
+                           </content>
+                        </ScrollPane>
+                        <Label layoutX="267.0" layoutY="1.0" prefHeight="31.0" prefWidth="476.0" text="                                 MESSENGER" textAlignment="CENTER" textFill="WHEAT">
+                           <font>
+                              <Font name="System Bold Italic" size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="mesaj" layoutX="270.0" layoutY="380.0" prefHeight="47.0" prefWidth="403.0" />
+                        <Button fx:id="send" layoutX="674.0" layoutY="382.0" mnemonicParsing="false" onAction="#create_message" prefHeight="46.0" prefWidth="69.0" />
+                        <TableView fx:id="groups_mess" layoutY="201.0" prefHeight="184.0" prefWidth="266.0" style="-fx-background-color: SlateGrey;  -fx-border-style: solid; -fx-border-color: white;-fx-border-width: 2; -fx-font-weight: bold; -fx-text-fill:black;">
+                            <columns>
+                              <TableColumn fx:id="Nume_grup" prefWidth="263.99999394416807" style="-fx-background-color:SlateGrey;  -fx-border-style: solid; -fx-border-color: SlateGrey;-fx-border-width: 2; -fx-font-weight: bold; -fx-text-fill: wheat;" text="GRUPURI" />
+                          </columns>
+                        </TableView>
+                        <Pagination fx:id="pagina_prieteni_mess" layoutX="2.0" layoutY="150.0" prefHeight="37.0" prefWidth="266.0" />
+                        <Pagination fx:id="pagina_groups_mess" layoutX="69.0" layoutY="380.0" prefHeight="26.0" prefWidth="140.0" />
+                        </children>
+                    </AnchorPane>
+                </content>
+            </Tab>
+
+            <Tab fx:id="cinci">
+                <content>
+                    <AnchorPane fx:id="anchor5" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="raport1" layoutX="83.0" layoutY="23.0" mnemonicParsing="false" onAction="#raport_unu" prefHeight="38.0" prefWidth="139.0" text="RAPORT 1" />
+                        <Button fx:id="raport2" layoutX="294.0" layoutY="25.0" mnemonicParsing="false" onAction="#raport_doi" prefHeight="34.0" prefWidth="140.0" text="RAPORT 2" />
+                        <DatePicker fx:id="data1" layoutX="83.0" layoutY="81.0" prefHeight="46.0" prefWidth="199.0" />
+                        <DatePicker fx:id="data2" layoutX="294.0" layoutY="81.0" prefHeight="46.0" prefWidth="203.0" />
+                        <TableView fx:id="tabel_selectare" layoutX="1.0" layoutY="149.0" prefHeight="218.0" prefWidth="310.0">
+                          <columns>
+                            <TableColumn fx:id="nume_selectare" prefWidth="156.0000057220459" style="-fx-background-color:SlateGrey;  -fx-border-style: solid; -fx-border-color: SlateGrey;-fx-border-width: 2; -fx-font-weight: bold; -fx-text-fill: wheat;" text="NUME" />
+                            <TableColumn fx:id="prenume_selectare" prefWidth="152.79998779296875" style="-fx-background-color:SlateGrey;  -fx-border-style: solid; -fx-border-color:SlateGrey;-fx-border-width: 2; -fx-font-weight: bold; -fx-text-fill: wheat;" text="PRENUME" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="buton_pdf" layoutX="310.0" layoutY="265.0" mnemonicParsing="false" onAction="#salveaza_pdf" prefHeight="42.0" prefWidth="208.0" text="SALVEAZA PDF" />
+                        <Label fx:id="label_pdf" layoutX="310.0" layoutY="203.0" prefHeight="34.0" prefWidth="266.0" textFill="WHEAT">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font></Label>
+                        <Pagination fx:id="pagina_tabel_selectare" layoutX="4.0" layoutY="368.0" prefHeight="41.0" prefWidth="200.0" />
+                        <ImageView fitHeight="146.0" fitWidth="164.0" layoutX="586.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/pdf1.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="4.0" layoutY="-1.0" prefHeight="18.0" prefWidth="101.0" text="     PRIETENI" textFill="WHEAT">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="103.0" layoutY="-4.0" prefHeight="24.0" prefWidth="99.0" text="CERERI TRIMISE" textFill="WHEAT">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="209.0" layoutY="-2.0" prefHeight="18.0" prefWidth="101.0" text="CERERI PRIMITE" textFill="WHEAT">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="317.0" layoutY="-2.0" prefHeight="16.0" prefWidth="94.0" text="     CHAT" textFill="WHEAT">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="413.0" layoutY="-3.0" prefHeight="22.0" prefWidth="98.0" text="        PDF" textFill="RED">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="516.0" prefHeight="18.0" prefWidth="94.0" text="  EVENIMENTE" textFill="WHEAT">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="622.0" layoutY="-1.0" prefHeight="18.0" prefWidth="97.0" text="   ABONARI" textFill="WHEAT">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                     </children></AnchorPane>
+                </content>
+            </Tab>
+            <Tab fx:id="sase">
+               <content>
+                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tabel_evenimente" layoutX="257.0" layoutY="24.0" prefHeight="206.0" prefWidth="470.0">
+                          <columns>
+                              <TableColumn fx:id="c1_eveniment" prefWidth="232.59994506835938" style="-fx-background-color:SlateGrey;  -fx-border-style: solid; -fx-border-color: SlateGrey;-fx-border-width: 2; -fx-font-weight: bold; -fx-text-fill: wheat;" text="DESCRIERE" />
+                              <TableColumn fx:id="c2_eveniment" prefWidth="236.00002441406252" style="-fx-background-color:SlateGrey;  -fx-border-style: solid; -fx-border-color: SlateGrey;-fx-border-width: 2; -fx-font-weight: bold; -fx-text-fill: wheat;" text="DATA" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="adauga_eveniment" layoutX="24.0" layoutY="127.0" mnemonicParsing="false" onAction="#adauga_eveniment" prefHeight="30.0" prefWidth="178.0" text="ADAUGA EVENIMENT" textFill="#fdfdfd">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font></Button>
+                        <TextField fx:id="descriere_eveniment" layoutX="24.0" layoutY="36.0" prefHeight="26.0" prefWidth="171.0" promptText="descriere eveniment" />
+                        <DatePicker fx:id="data_eveniment" layoutX="24.0" layoutY="82.0" promptText="data" />
+                        <Button fx:id="abonare" layoutX="257.0" layoutY="302.0" mnemonicParsing="false" onAction="#abonare" prefHeight="46.0" prefWidth="177.0" text="ABONEAZA-TE" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font></Button>
+                        <Button fx:id="dezabonare" layoutX="561.0" layoutY="303.0" mnemonicParsing="false" onAction="#dezabonare" prefHeight="44.0" prefWidth="171.0" text="DEZABONEAZA-TE" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font></Button>
+                        <Pagination fx:id="pagina_evenimente" layoutX="386.0" layoutY="236.0" prefHeight="45.0" prefWidth="210.0" />
+                        <ImageView fitHeight="123.0" fitWidth="124.0" layoutX="52.0" layoutY="211.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/save1.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="4.0" layoutY="-2.0" prefHeight="18.0" prefWidth="96.0" text="     PRIETENI" textFill="WHEAT">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="110.0" layoutY="-2.0" prefHeight="18.0" prefWidth="95.0" text="CERERI PRIMITE" textFill="WHEAT">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="213.0" layoutY="-1.0" prefHeight="18.0" prefWidth="98.0" text="CERERI TRIMISE" textFill="WHEAT">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="314.0" prefHeight="18.0" prefWidth="98.0" text="         CHAT" textFill="WHEAT">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="420.0" layoutY="-1.0" prefHeight="18.0" prefWidth="95.0" text="         PDF" textFill="WHEAT">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="518.0" prefHeight="18.0" prefWidth="99.0" text="  EVENIMENTE" textFill="RED">
+                           <font>
+                              <Font name="System Bold" size="11.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="624.0" layoutY="1.0" prefHeight="18.0" prefWidth="95.0" text="ABONARI" textFill="WHEAT">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                   </AnchorPane>
+               </content>
+            </Tab>
+
+
+            <Tab fx:id="sapte" onSelectionChanged="#afisare_news">
+                <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <VBox fx:id="box_news" layoutX="15.0" layoutY="32.0" prefHeight="330.0" prefWidth="722.0" />
+                        <Label layoutX="6.0" prefHeight="18.0" prefWidth="95.0" text="      PRIETENI" textFill="WHEAT">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="109.0" layoutY="1.0" prefHeight="18.0" prefWidth="100.0" text="CERERI TRIMISE" textFill="WHEAT">
+                           <font>
+                              <Font name="System Bold" size="11.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="210.0" layoutY="2.0" prefHeight="18.0" prefWidth="99.0" text="CERERI PRIMITE" textFill="WHEAT">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="315.0" layoutY="3.0" prefHeight="18.0" prefWidth="97.0" text="        CHAT" textFill="WHEAT">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="413.0" prefHeight="18.0" prefWidth="100.0" text="          PDF" textFill="WHEAT">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="513.0" prefHeight="18.0" prefWidth="97.0" text="   EVENIMENTE" textFill="WHEAT">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="624.0" prefHeight="18.0" prefWidth="94.0" text="     ABONARI" textFill="RED">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                    </AnchorPane>
+                </content>
+            </Tab>
+
+
+        </tabs>
+         <padding>
+            <Insets left="30.0" right="20.0" top="11.0" />
+         </padding>
+      </TabPane>
+   </children>
+</AnchorPane>
